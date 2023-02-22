@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento de trânsito</title>
+    <script>
+        var anoAtual = prompt("Digite o ano atual: ");
+        var anoNascimento = prompt("Digite o ano em que você nasceu: ");
+        var maioridade = anoAtual - anoNascimento;
+
+        if(maioridade >= 18){
+            document.write(`Idade: ${maioridade} anos! <br>`);
+            document.write("Apto a tirar a carteira!");
+        } else {
+            document.write(`Idade: ${maioridade} anos! <br>`);
+            document.write("Inapto a tirar a carteira!");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

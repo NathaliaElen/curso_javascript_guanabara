@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário Hora de um funcionário</title>
+    <script>
+        //entrada de dados
+        var salarioMensal = Number.parseFloat(prompt("Digite seu salário: "));
+        var horasTrabalhadasMensal = Number.parseInt(prompt("Digite o número de horas trabalhadas no mês: "));
+
+        //processamento
+        var valorHora = salarioMensal / horasTrabalhadasMensal;
+
+        //saída de dados
+        document.write(`Salário Mensal: ${salarioMensal.toFixed(2).replace('.', ',')} <br>`);
+        document.write(`Horas Trabalhadas Mensalmente: ${horasTrabalhadasMensal} <br>`);
+        document.write(`Valor Hora: ${valorHora.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})}`);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

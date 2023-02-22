@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Aritméticos</title>
+    <script>
+        var n1 = 10 + 5;
+        var n2 = 10 - 5;
+        var n3 = 10 * 5;
+        var n4 = 10 / 5;
+        var n5 = 10 % 5;
+        var n6 = 10 ** 5;
+
+        document.write(n1 + "<br>");
+        document.write(n2 + "<br>");
+        document.write(n3 + "<br>");
+        document.write(n4 + "<br>");
+        document.write(n5 + "<br>");
+        document.write(n6 + "<br>");
+
+        //precedência de operadores
+        var num1 = 6 / 2 ** 3; //exponenciação primeiro
+        document.write(num1 + "<br>");
+
+        var num2 = 10 + 5 * 2 //multiplicação primeiro
+        document.write(num2 + "<br>");
+
+        var num3 = (40 - 15)/2; //parênteses primeiro
+        document.write(num3 + "<br>");
+
+        var num4 = 11 % 2 * 10 //mesma precência, então vai da esquerda para direita
+        document.write(num4 + "<br>");
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

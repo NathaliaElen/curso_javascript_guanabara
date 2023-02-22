@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média do Aluno</title>
+    <script>
+        var nota1 = Number(prompt("Digite sua primeira nota: "));
+        var nota2 = Number(prompt("Digite sua segunda nota: "));
+        var nota3 = Number(prompt("Digite sua terceira nota: "));
+        var nota4 = Number(prompt("Digite sua quarta nota: "));
+
+        var media = (nota1 + nota2 + nota3 + nota4)/4;
+
+        document.write(`Primeira nota: ${nota1.toFixed(1).replace(".", ",")} <br>.`);
+        document.write(`Segunda nota: ${nota2.toFixed(1).replace(".", ",")} <br>.`);
+        document.write(`Terceira nota: ${nota3.toFixed(1).replace(".", ",")} <br>.`);
+        document.write(`Quarta nota: ${nota4.toFixed(1).replace(".", ",")} <br>.`);
+        document.write(`A média entre essas notas é igual a ${media.toFixed(1).replace(".", ",")}.`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
