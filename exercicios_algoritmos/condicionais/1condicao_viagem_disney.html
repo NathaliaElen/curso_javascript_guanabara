@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viagem Disney</title>
+    <script>
+        const dinheiro = Number(prompt('Digite quanto dinheiro você possui:'));
+        
+        //condicional composta
+        if (dinheiro >= 10000) {
+            document.write(`<p>Você atingiu o valor de ${dinheiro.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})}!</p>`);
+            document.write('Partiu Disney!');
+        } else {
+            document.write(`<p>Você atingiu o valor de ${dinheiro.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})}, mas infelizmente não é o suficiente!</p>`);
+            document.write('Junte mais dinheiro!');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
