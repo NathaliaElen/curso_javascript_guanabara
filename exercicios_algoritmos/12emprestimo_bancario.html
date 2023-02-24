@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empréstimo Bancário</title>
+    <script>
+        //entrada de dados
+        const valorEmprestimo = Number(prompt('Digite o valor do empréstimo: '));
+        const quantidadeParcelas = Number(prompt('Quantas parcelas quer dividir: '));
+
+        //processamento 20% de juros
+        const juros = valorEmprestimo * 20 / 100;
+        const valorTotal = valorEmprestimo + juros;
+        const valorParcelado = valorTotal / quantidadeParcelas;
+
+        //saída de dados
+        document.write('<p>O juros é de <strong>20%</strong> do valor do empréstimo!</p>');
+
+        document.write(`<p>O valor do seu empréstimo foi de ${valorEmprestimo.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})} e você pagará <strong>${juros.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})} de juros!</strong</p>`);
+
+        document.write(`<p>Valor total a pagar ao banco: <strong>${valorTotal.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})}</strong></p>`);
+
+        document.write(`<p>Em ${quantidadeParcelas} parcelas de <strong>${valorParcelado.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})}</strong></p>`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

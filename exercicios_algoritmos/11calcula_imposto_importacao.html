@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imposto do Produto</title>
+    <script>
+        //entrada de dados
+        let preco = Number(prompt('Digite o preço do produto:'));
+
+        //processamento 60% do preço do produto
+        let imposto = preco * 60 / 100;
+
+        //saída de dados
+        document.write(`Seu produto custou ${preco.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})} e o imposto do produto é ${imposto.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
