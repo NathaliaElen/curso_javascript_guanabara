@@ -8,24 +8,28 @@
     <script>
         alert("Calculador de IMC");
         var nome = prompt("Digite seu nome: ");
-        var peso = prompt("Digite seu peso: ");
-        var altura = prompt("Digite sua altura: ");
-        var imc = peso / (altura * altura);
+        var peso = Number(prompt("Digite seu peso (kg): "));
+        var altura = Number(prompt("Digite sua altura (m): "));
+        var imc = peso / altura ** 2;
 
-        document.write(`Olá, ${nome}. Seu peso é de ${peso}kg e sua altura igual a ${altura}m <br>`);
-        document.write(`Seu IMC: ${imc} <br>`);
+        document.write(`Olá, ${nome}. Seu peso é de <strong>${peso}kg</strong> e sua altura igual a <strong>${altura}m</strong> <br>`);
+        document.write(`Seu IMC: ${imc.toFixed(2)} <br>`);
 
         //condicional aninhada
-        if((imc >= 18.5)&& (imc < 25)){
+        if(imc < 17){
+            document.write("Muito abaixo do peso!" + "<br>");
+        } else if ((imc >= 17) && (imc < 18.5)){
+            document.write("Abaixo do peso!" + "<br>");
+        } else if ((imc >= 18.5) && (imc < 25)){
             document.write("Peso ideal!" + "<br>");
         } else if ((imc >= 25) && (imc < 30)){
             document.write("Levemente acima do peso!" + "<br>");
         } else if ((imc >= 30) && (imc < 35)){
-            document.write("Obesidade grau I(alerta)!" + "<br>");
+            document.write("Obesidade grau I (alerta)!" + "<br>");
         } else if ((imc >= 35) && (imc < 40)){
-            document.write("Obesidade II(severa)!" + "<br>");
+            document.write("Obesidade II (severa)!" + "<br>");
         } else {
-            document.write("Obesidade III(mórbida)!" + "<br>");
+            document.write("Obesidade III (mórbida)!" + "<br>");
         }
     </script>
 </head>

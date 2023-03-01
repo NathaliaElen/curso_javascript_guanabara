@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partida Futebol</title>
+    <script>
+        let quantGolsBangu = Number(prompt('Quantos gols do BANGU?'));
+        let quantGolsMadureira = Number(prompt('Quantos gols do MADUREIRA?'));
+        const diferencaGols = Math.abs(quantGolsBangu - quantGolsMadureira);
+        let resultado;
+        
+        document.write('<p>MADUREIRA X BANGU</p>');
+
+        switch (diferencaGols) {
+            case 0: 
+            document.write('Status: Empate!');
+            break;
+            case 1,2,3: 
+            document.write('Status: Partida normal!');
+            break;
+            default: 
+            document.write('Status: Goleada!');
+            break;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criança Esperança</title>
+</head>
+
+<body>
+    <header>
+        <h1>Criança Esperança</h1>
+        <p>Digite 1 para doar R$10 reais</p>
+        <p>Digite 2 para doar R$25 reais</p>
+        <p>Digite 3 para doar R$50 reais</p>
+        <p>Digite 4 para doar outros valores</p>
+        <p>Digite 5 para cancelar</p>
+    </header>
+
+    <form>
+        <input type="number" name="numeroEscolhido" id="numeroEscolhido" placeholder="Digite aqui" />
+        <input type="button" value="Doar" onclick="doar()" />
+        <div id="resultado"></div>
+    </form>
+
+    <script>
+        function doar() {
+            const numeroEscolhido = document.querySelector("#numeroEscolhido").value;
+            const resultado = document.querySelector("#resultado");
+            
+
+            switch (numeroEscolhido) {
+                case 1:
+                    let valor1 = 10;
+                    resultado.innerHTML = `<p>Sua doação foi de <strong>10 reais</strong></p>`;
+                    break;
+                case 2:
+                    let valor2 = 25;
+                    resultado.innerHTML = `<p>Sua doação foi de <strong>${valor2.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})}</strong></p>`;
+                    break;
+                case 3:
+                    let valor3 = 50;
+                    resultado.innerHTML = `<p>Sua doação foi de <strong>${valor3.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})}</strong></p>`;
+                    break;
+                case 4:
+                    resultado.innerHTML = `</p>`;
+                    break;
+                default:
+                   let valor5 = 0;
+                   resultado.innerHTML = `<p>Sua doação foi de <strong>${valor5.toLocaleString('pt-BR', {style:'currency',currency:'BRL'})}</strong></p>`;
+                   break;
+            }
+
+            resultado.innerHTML += "<p>Muito Obrigada!!!</p>";    
+        }
+    </script>
+</body>
+
+</html>
